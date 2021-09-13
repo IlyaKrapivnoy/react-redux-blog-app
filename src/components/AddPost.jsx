@@ -17,6 +17,10 @@ class AddPost extends Component {
                                 name='content'
                                 className='materialize-textarea'
                             ></textarea>
+                            <button className='btn blue'>
+                                Submit{' '}
+                                <i className='material-icons right'>send</i>
+                            </button>
                         </div>
                     </form>
                 </div>
