@@ -4,8 +4,8 @@ class AddPost extends Component {
     render() {
         return (
             <>
-                <div className='container'>
-                    <div className='blue-text center-align'>Redux Blog</div>
+                <div className='container' style={{ margin: '2.5rem auto' }}>
+                    <h4 className='blue-text center-align'>Redux Blog</h4>
                     <form>
                         <div className='input-field'>
                             <label htmlFor='post_title'>Title</label>
