@@ -18,12 +18,23 @@ class AddPost extends Component {
         });
     };
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state.post);
+        this.setState({
+            post: {
+                title: '',
+                content: '',
+            },
+        });
+    };
+
     render() {
         return (
             <>
                 <div className='container' style={{ margin: '2.5rem auto' }}>
                     <h4 className='blue-text center-align'>Redux Blog</h4>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div className='input-field'>
                             <label htmlFor='post_title'>Title</label>
                             <input
