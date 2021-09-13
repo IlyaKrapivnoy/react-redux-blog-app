@@ -10,6 +10,11 @@ const initState = {
             title: 'post two',
             content: 'this is post two',
         },
+        {
+            id: 3,
+            title: 'post three',
+            content: 'this is post three',
+        },
     ],
 };
 
