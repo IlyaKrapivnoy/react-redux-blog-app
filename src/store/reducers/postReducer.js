@@ -13,6 +13,11 @@ const postReducer = (state = initState, action) => {
             return {
                 posts: newPost,
             };
+        case 'ADD_POST':
+            console.log('you clicked me');
+            return {
+                posts: [...state.posts, action.post],
+            };
         default:
             return state;
     }
