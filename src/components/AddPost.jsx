@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 
 class AddPost extends Component {
+    state = {
+        post: {
+            id: 3,
+            title: '',
+            content: '',
+        },
+    };
+
+    handleChange = (e) => {
+        this.setState({
+            post: {
+                ...this.state.post,
+                [e.target.name]: e.target.value,
+            },
+        });
+    };
+
     render() {
         return (
             <>
@@ -9,13 +26,20 @@ class AddPost extends Component {
                     <form>
                         <div className='input-field'>
                             <label htmlFor='post_title'>Title</label>
-                            <input type='text' name='title' />
+                            <input
+                                onChange={this.handleChange}
+                                value={this.state.post.title}
+                                type='text'
+                                name='title'
+                            />
                         </div>
                         <div className='input-field'>
                             <label htmlFor='post_content'>Content</label>
                             <textarea
                                 name='content'
                                 className='materialize-textarea'
+                                onChange={this.handleChange}
+                                value={this.state.post.content}
                             ></textarea>
                             <button className='btn blue'>
                                 Submit{' '}
