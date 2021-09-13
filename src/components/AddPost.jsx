@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class AddPost extends Component {
     state = {
         post: {
-            id: 3,
+            id: Math.floor(Math.random() * 100),
             title: '',
             content: '',
         },
@@ -25,6 +25,7 @@ class AddPost extends Component {
         this.props.createPost(this.state.post);
         this.setState({
             post: {
+                id: Math.floor(Math.random() * 100),
                 title: '',
                 content: '',
             },
