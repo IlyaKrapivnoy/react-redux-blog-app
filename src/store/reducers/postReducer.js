@@ -1,5 +1,16 @@
 const initState = {
-    posts: [],
+    posts: [
+        {
+            id: 1,
+            title: 'post 1',
+            content: 'post content 1',
+        },
+        {
+            id: 2,
+            title: 'post 2',
+            content: 'post content 2',
+        },
+    ],
 };
 
 const postReducer = (state = initState, action) => {
