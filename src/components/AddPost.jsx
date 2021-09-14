@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addPost } from '../store/actions/PostAction';
 
 class AddPost extends Component {
     state = {
@@ -70,7 +71,7 @@ class AddPost extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         createPost: (post) => {
-            dispatch({ type: 'ADD_POST', post });
+            dispatch(addPost(post));
         },
     };
 };
