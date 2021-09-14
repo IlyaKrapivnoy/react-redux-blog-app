@@ -1,4 +1,4 @@
-import AddPost from './AddPost';
+import { AddPost } from './AddPost';
 import { PostList } from './PostList';
 
 const HomePage = () => {
